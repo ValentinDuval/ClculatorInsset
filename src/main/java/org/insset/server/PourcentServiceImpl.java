@@ -15,22 +15,21 @@ import org.insset.client.service.PourcentageService;
 @SuppressWarnings("serial")
 public class PourcentServiceImpl extends RemoteServiceServlet implements
         PourcentageService {
+    
+    /**
+     *
+     * @param nbr
+     * @return
+     * @throws IllegalArgumentException
+     */
+    
 
     @Override
-    public Float remise(Float prix, Long remise) throws IllegalArgumentException {
-        if (prix < 0) {
-            throw new IllegalArgumentException("Le prix ne peut être négatif.");
-        }
-        
-        if (remise < 0 || remise > 100) {
-            throw new IllegalArgumentException("La remise doit être comprise entre 0 et 100%.");
-        }
-        
-        float tempValue = prix * remise / 100;
-        int finalValue = (int) Math.floor(tempValue * 100);
-        
-        return ((float) finalValue / 100);
+    public Integer division(Integer nbrA, Integer nbrB) throws IllegalArgumentException {
+        int result = nbrA / nbrB;
+        return result; 
     }
+
 
 
 }
