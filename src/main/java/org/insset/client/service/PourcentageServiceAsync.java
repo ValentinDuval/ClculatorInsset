@@ -15,5 +15,4 @@ import com.google.gwt.user.client.rpc.RemoteService;
 public interface PourcentageServiceAsync {
 
     void remise(java.lang.Float prix, java.lang.Long remise, com.google.gwt.user.client.rpc.AsyncCallback<java.lang.Float> arg3);
-    void division(Integer nbrA, Integer nbrB, AsyncCallback<Integer> callback);
 }
